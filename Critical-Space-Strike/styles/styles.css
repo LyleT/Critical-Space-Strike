@@ -1,0 +1,303 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --header: rgb(1, 6, 134);
+  --header-glow: rgb(63, 37, 228);
+  --accent-top-side-line: rgb(49, 102, 202);
+  --caps-title: rgb(245, 248, 246);
+  --title-body: rgb(198, 200, 221);
+  --score: rgb(122, 243, 246);
+  --btn-background: rgb(0, 0, 0);
+  --btn-text: rgb(152, 152, 152);
+  --btn-glow: rgb(6, 14, 189);
+  --player-lives-icon: rgb(238, 166, 62);
+  --accent-bottom-line: rgb(196, 45, 38);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/***************************************
+******** Typography & Buttons **********
+****************************************
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+button {
+  font-family: "VT323", monospace;
+  font-size: 1.25rem;
+}
+
+button {
+  background: black;
+  border: 0.2rem solid var(--btn-glow);
+  border-radius: 1.2rem;
+  font-size: 1.75rem;
+  padding: 0.75rem;
+  color: var(--btn-text);
+}
+
+/***************************************
+*************** Body *******************
+****************************************
+*/
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-image: url("../assets/images/space-strike-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+}
+
+/***************************************
+*************** Header **************
+****************************************
+*/
+
+header {
+  display: flex;
+  width: 100%;
+  background: linear-gradient(
+    var(--header) 40%,
+    var(--header-glow) 60%,
+    var(--header) 100%
+  );
+  padding-top: 20px;
+}
+
+header .header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+header .header-container h1 {
+  text-align: center;
+  color: var(--title-body);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  padding-bottom: 1rem;
+}
+
+header .header-container h1 span {
+  color: var(--caps-title);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+header .score-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+header .score-container h2 {
+  color: var(--score);
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+}
+
+/***************************************
+********** Game Console Main  **********
+****************************************
+*/
+
+main {
+  display: flex;
+
+  flex-direction: column;
+  width: 100%;
+}
+
+.main-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 600px;
+  width: 100%;
+  border-left: 5px solid var(--accent-top-side-line);
+  border-right: 5px solid var(--accent-top-side-line);
+}
+
+.enemy-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 400px;
+}
+
+.enemy-one,
+.enemy-two,
+.enemy-three {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+}
+
+.enemy-one {
+  left: 100%;
+  top: 0px;
+}
+
+.enemy-two {
+  left: 100%;
+  top: 100px;
+}
+
+.enemy-three {
+  left: 100%;
+  top: 200px;
+}
+
+.enemy-one img,
+.enemy-two img,
+.enemy-three img {
+  height: 60px;
+  width: 60px;
+  margin: 1rem;
+}
+
+.player {
+  display: flex;
+  height: 300px;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+.player-img {
+  height: 150px;
+}
+.player .player-img img {
+  height: 150px;
+  width: 100px;
+  position: absolute;
+  max-height: 100%;
+  margin: 0;
+}
+/***************************************
+********** Game Console Controls *******
+****************************************
+*/
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  padding-top: 6px;
+  border-top: 5px solid var(--accent-bottom-line);
+  border-style: double;
+}
+
+/***************************************
+************   Animations  *************
+****************************************
+*/
+
+.image-animation1 {
+  -webkit-animation: moveToLeft 5s ease-in infinite;
+  animation: moveToLeft 5s ease-in infinite;
+  animation-direction: alternate;
+}
+
+.image-animation2 {
+  -webkit-animation: moveToLeft 5s linear infinite;
+  animation: moveToLeft 5s linear infinite;
+  animation-direction: alternate;
+}
+
+.image-animation3 {
+  -webkit-animation: moveToLeft 5s ease-in-out infinite;
+  animation: moveToLeft 5s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+@keyframes moveToLeft {
+  0% {
+    left: 100%;
+    transform: translateX(-100%);
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+/***************************************
+************  Media Queries  ***********
+****************************************
+*/
+
+@media screen and (max-width: 800px) {
+  .enemy-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 200px;
+  }
+
+  .enemy-one,
+  .enemy-two,
+  .enemy-three {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+  }
+
+  .enemy-one img,
+  .enemy-two img,
+  .enemy-three img {
+    height: 40px;
+    width: 40px;
+    margin: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .image-animation1 {
+    -webkit-animation: moveToLeft 2s ease-in infinite;
+    animation: moveToLeft 2s ease-in infinite;
+    animation-direction: alternate;
+  }
+
+  .image-animation2 {
+    -webkit-animation: moveToLeft 2s ease-in infinite;
+    animation: moveToLeft 2s linear infinite;
+    animation-direction: alternate;
+  }
+
+  .image-animation3 {
+    -webkit-animation: moveToLeft 2s ease-in infinite;
+    animation: moveToLeft 2s ease-in-out infinite;
+    animation-direction: alternate;
+  }
+
+  .player .player-img img {
+    height: 100px;
+    width: 50px;
+  }
+}

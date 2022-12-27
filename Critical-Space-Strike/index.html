@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Strike</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./assets/images/favicon.ico"
+    />
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./styles/normalize.css" type="text/css" rel="stylesheet" />
+    <link href="./styles/styles.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1><span>C</span>ritical <span>S</span>pace <span>S</span>trike</h1>
+        <div class="score-container">
+          <button>NEW</button>
+          <h2>0000</h2>
+          <div class="game-lives">
+            <img src="./assets/images/thicktardis.png" />
+            <img src="./assets/images/thicktardis.png" />
+            <img src="./assets/images/thicktardis.png" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main-container">
+        <div class="enemy-container">
+          <div class="enemy-one image-animation1">
+            <img src="./assets/images/reddalek-pixilart.png" />
+            <img src="./assets/images/reddalek-pixilart.png" />
+            <img src="./assets/images/reddalek-pixilart.png" />
+            <img src="./assets/images/reddalek-pixilart.png" />
+            <img src="./assets/images/reddalek-pixilart.png" />
+          </div>
+          <div class="enemy-two image-animation2">
+            <img src="./assets/images/blackdalek-pixilart.png" />
+            <img src="./assets/images/blackdalek-pixilart.png" />
+            <img src="./assets/images/blackdalek-pixilart.png" />
+            <img src="./assets/images/blackdalek-pixilart.png" />
+            <img src="./assets/images/blackdalek-pixilart.png" />
+          </div>
+          <div class="enemy-three image-animation3">
+            <img src="./assets/images/yellowdalek-pixilart.png" />
+            <img src="./assets/images/yellowdalek-pixilart.png" />
+            <img src="./assets/images/yellowdalek-pixilart.png" />
+            <img src="./assets/images/yellowdalek-pixilart.png" />
+            <img src="./assets/images/yellowdalek-pixilart.png" />
+          </div>
+        </div>
+
+        <div class="player">
+          <div class="player-img">
+            <img src="./assets/images/thicktardis.png" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="controls">
+          <button onclick="leftMove()">left</button>
+          <button onclick="upMove()">up</button>
+          <button onclick="downMove()">down</button>
+          <button onclick="rightMove()">right</button>
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
