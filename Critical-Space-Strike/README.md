@@ -7,6 +7,8 @@ https://LyleT.github.io/Critical-Space-Strike/
 ## LinkedIn Profile
 
 https://www.linkedin.com/in/lyle-trethewey-4480b3ab/
+![Screenshot 2022-12-27 at 5 33 31 PM](https://user-images.githubusercontent.com/17390421/209734664-750351e2-fc1d-4197-93c8-645dbd06d4a4.jpg)
+![Screenshot 2022-12-27 at 5 34 17 PM](https://user-images.githubusercontent.com/17390421/209734674-73ca6e10-f782-4e6b-aaad-7af5d6895d93.jpg)
 
 ## Overview
 
